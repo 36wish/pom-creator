@@ -1,8 +1,10 @@
 {
   "name": "pom-creator",
   "displayName": "POM creator",
-  "description": "",
+  "description": "Create a new POM page from template, and insert methods into PageObjectManager.",
   "version": "0.2.1",
+  "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -15,7 +17,7 @@
     "commands": [
       {
         "command": "extension.createPlaywrightPage",
-        "title": "Create Playwright Page Object"
+        "title": "Create Playwright Page Object POM"
       }
     ]
   },
