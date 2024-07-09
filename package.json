@@ -1,5 +1,10 @@
 {
   "name": "pom-creator",
+  "publisher": "36wish",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/36wish/pom-creator"
+  },
   "displayName": "POM creator",
   "description": "Create a new POM page from template, and insert methods into PageObjectManager.",
   "version": "0.3.1",
