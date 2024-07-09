@@ -71,21 +71,21 @@ module.exports = { ${fileName} };
 			// Add import statement
 			const importStatement = `const { ${fileName} } = require("./D365/${selectedFolder}/${fileName}");\n`;
 			pomContent = pomContent.replace(
-				/(const { extendPage } = require\('\.\.\/utility\/locatorExtension'\);)/,
+				/(const { PendingInvoices } = require\('\.\/D365\/SalesAndMarketing\/PendingInvoices'\);)/,
 				`${importStatement}$1`
 			);
 
 			// Add to constructor
 			const constructorLine = `this.${fileName} = new ${fileName}(this.page, this.env);`;
 			pomContent = pomContent.replace(
-				/(this\.HourPage = new HourPage\(this\.page, this\.env\);)/,
+				/(this\.PendingInvoices = new PendingInvoices\(this\.page, this\.env\);)/,
 				`${constructorLine}\n    $1`
 			);
 
 			// Add getter method
 			const getterMethod = `get${fileName}() { return this.${fileName}; }`;
 			pomContent = pomContent.replace(
-				/(getHourPage\(\) { return this\.HourPage; })/,
+				/(getPendingInvoices\(\) { return this\.PendingInvoices; })/,
 				`${getterMethod}\n  $1`
 			);
 
