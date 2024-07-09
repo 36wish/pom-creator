@@ -71,7 +71,7 @@ module.exports = { ${fileName} };
 			// Add import statement
 			const importStatement = `const { ${fileName} } = require("./D365/${selectedFolder}/${fileName}");\n`;
 			pomContent = pomContent.replace(
-				/(const { PendingInvoices } = require\('\.\/D365\/SalesAndMarketing\/PendingInvoices'\);)/,
+				/(const {PendingInvoices} = require\("\.\/D365\/SalesAndMarketing\/PendingInvoices"\))/,
 				`${importStatement}$1`
 			);
 
@@ -85,7 +85,7 @@ module.exports = { ${fileName} };
 			// Add getter method
 			const getterMethod = `get${fileName}() { return this.${fileName}; }`;
 			pomContent = pomContent.replace(
-				/(getPendingInvoices\(\) { return this\.PendingInvoices; })/,
+				/(getPendingInvoices\(\) {return this\.PendingInvoices; })/,
 				`${getterMethod}\n  $1`
 			);
 
