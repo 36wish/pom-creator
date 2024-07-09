@@ -7,7 +7,7 @@
   },
   "displayName": "POM creator",
   "description": "Create a new POM page from template, and insert methods into PageObjectManager.",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "icon": "icon.png",
   "engines": {
